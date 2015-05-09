@@ -1,0 +1,23 @@
+.wrapper {
+    outline: 2px dotted blue; /** optional **/
+
+    /** Top padding so that initially, the content is below the header **/
+    padding-top: 100px;
+
+}
+
+.header {
+    height: 100px;
+    width: 400px; /** Use 100% to fill the width of the page **/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: rgba(0,0,255,0.2);
+}
+
+img.banner {
+    display: block;
+    margin: 0 auto;
+} 
