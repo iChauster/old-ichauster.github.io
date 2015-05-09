@@ -21,7 +21,11 @@ img.banner {
     display: block;
     margin: 0 auto;
 } 
-body{background-color :blue;}
+body{background-color :gray;}
+h1{
+        font-family: 'Roboto', sans-serif;
+
+}
 p{
     font-family: 'Roboto', sans-serif;
 }
