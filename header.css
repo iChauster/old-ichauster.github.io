@@ -22,3 +22,6 @@ img.banner {
     margin: 0 auto;
 } 
 body{background-color :blue;}
+p{
+    font-family: 'Roboto', sans-serif;
+}
