@@ -48,6 +48,10 @@ a:hover {
   background-color: #fff;
   border: 1px solid #fff;
 }
+.dropdown-menu{
+    text-shadow:none;
+    border: transparent;
+}
 
 
 /*
@@ -138,7 +142,9 @@ body {
 /*
  * Cover
  */
-
+.cover-heading{
+        font-family: 'Roboto', sans-serif;
+}
 .cover {
   padding: 0 20px;
 }
