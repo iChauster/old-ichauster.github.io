@@ -143,9 +143,9 @@ body {
  * Cover
  */
 .cover-heading{
-
+        font-size: 40px;
         font-family: 'Roboto', sans-serif;
-        
+
 }
 .cover {
   padding: 0 20px;
