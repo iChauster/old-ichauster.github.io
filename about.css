@@ -23,9 +23,7 @@ a:active,
 a.active {
     outline: 0;
     color: #18bc9c;
-    background-image : url(http://www.pedals2people.org/wp-content/uploads/2011/07/Space.jpg);
-    background-repeat :no-repeat;
-    background-attachment: fixed;
+  
 }
 
 h1,
@@ -86,6 +84,9 @@ header {
     text-align: center;
     color: #fff;
     background: #18bc9c;
+      background-image : url(http://www.pedals2people.org/wp-content/uploads/2011/07/Space.jpg);
+    background-repeat :no-repeat;
+    background-attachment: fixed;
 }
 
 header .container {
