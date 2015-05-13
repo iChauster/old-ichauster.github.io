@@ -87,6 +87,8 @@ header {
       background-image : url(http://www.pedals2people.org/wp-content/uploads/2011/07/Space.jpg);
     background-repeat :no-repeat;
     background-attachment: fixed;
+        background-position:fixed;
+
 }
 
 header .container {
@@ -189,6 +191,7 @@ section.success {
       background-image : url(http://www.pedals2people.org/wp-content/uploads/2011/07/Space.jpg);
     background-repeat :no-repeat;
     background-attachment: fixed;
+    background-position:fixed;
 }
 
 section.success a,
@@ -198,7 +201,7 @@ section.success a:active,
 section.success a.active {
     outline: 0;
     color: #fff;
-    
+
 }
 
 @media(max-width:767px) {
