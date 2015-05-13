@@ -197,7 +197,7 @@ section.success a:focus,
 section.success a:active,
 section.success a.active {
     outline: 0;
-    color: #fff;
+ 
     color: #2c3e50;
 }
 
