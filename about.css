@@ -2,4 +2,7 @@ body {
 	background-image : url(http://www.pedals2people.org/wp-content/uploads/2011/07/Space.jpg);
 	background-repeat :no-repeat;
 	background-attachment: fixed;
+	text-align:center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+
 }
