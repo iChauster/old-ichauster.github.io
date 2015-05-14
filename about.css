@@ -181,7 +181,6 @@ header .intro-text .skills {
 }
 
 
-
 section {
     padding: 100px 0;
 }
@@ -197,6 +196,13 @@ section.success {
       background-image : url(http://www.pedals2people.org/wp-content/uploads/2011/07/Space.jpg);
     background-repeat :no-repeat;
     background-attachment: fixed;
+}
+section.swag{
+	padding: 50px 0;
+	color:#5CBFEB;
+		background-image:url(http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/1/14/1389716518289/Skylines-quiz-5-001.jpg);
+	background-position: center;
+
 }
 
 section.success a,
