@@ -173,6 +173,10 @@ header .intro-text .skills {
 .navbar-inverse {
     border: 0;
 }
+.swag{
+	padding:50px 0;
+}
+
 
 section {
     padding: 100px 0;
