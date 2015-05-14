@@ -193,7 +193,8 @@ section.success {
 }
 section.swag{
 	padding: 50px 0;
-	background-color:#5CBFEB;
+	color:#5CBFEB;
+    text-shadow:5px 5px 10px black;
 	background-image:url(http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/1/14/1389716518289/Skylines-quiz-5-001.jpg);
 	background-position: center;
 
