@@ -18,7 +18,6 @@
 
     <!-- Custom CSS -->
     <link href="about.css" rel="stylesheet">
-    <link href="mail/contact_me.php" rel = "stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -31,6 +30,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="scripts/soundcloud.player.api.js"></script>
+<script type="text/javascript">
+   soundcloud.addEventListener('onPlayerReady', function(player, data) {
+     player.api_play();
+   });
+</script>
 
 </head>
 
@@ -290,6 +295,11 @@
                     <div class="footer-col col-md-4">
                         <h3>Hard Work Is Never Over.</h3>
                         <p>*insert*</a>.</p>
+                        <object height="81" width="100%" id="yourPlayerId" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+                            <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fmatas%2Fhobnotropic&enable_api=true&object_id=yourPlayerId"></param>
+                             <param name="allowscriptaccess" value="always"></param>
+                             <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fmatas%2Fhobnotropic&enable_api=true&object_id=yourPlayerId" type="application/x-shockwave-flash" width="100%" name="yourPlayerId"></embed>
+                        </object>
                     </div>
                 </div>
             </div>
@@ -553,6 +563,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+    <!--SoundCloud -->
+    <script src="https://w.soundcloud.com/player/api.js"></script>
 
 </body>
 
