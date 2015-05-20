@@ -126,10 +126,7 @@ header .intro-text .skills {
         font-size: 1.75em;
     }
 }
-.parallax-window {
-    min-height: 400px;
-    background: transparent;
-}
+
 @media(min-width:768px) {
     .navbar-fixed-top {
         padding: 25px 0;
@@ -202,7 +199,7 @@ section.swag{
 	background-position: center;
 }
 section.cool{
-    padding:500px 0;
+    padding:250px 0;
 }
 .parallax-container{
     height: 500px;
