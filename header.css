@@ -92,11 +92,19 @@ body {
   left: -12%;
   top: -5%;
 }
+.trip{
+
+    padding: 20px;
+    height: 20%;
+    width:50%;
+    position: absolute center;
+}
 .layer{
     display:block;
     margin: 0;
     padding: 0;
     position: absolute;
+    left: -5%;
 }
 .site-wrapper-inner {
   display: table-cell;
