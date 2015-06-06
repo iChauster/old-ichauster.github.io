@@ -90,11 +90,10 @@ body {
   top: -5%;
 }
 .trip{
-    height: 20%;
-    width:50%;
+    height: 10%;
+    width:20%;
     position: absolute center;
-    left: -5%;
-    top:-9%;
+    left: -9%;
 }
 .layer{
     display:block;
