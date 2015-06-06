@@ -79,10 +79,7 @@ body {
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
           box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
-#scene{
-    height:100%;
-    width:100%;
-}
+
 .background{
   background: url(Columbia.jpg) no-repeat 50% 100%;
   bottom: 96px;
@@ -93,11 +90,11 @@ body {
   top: -5%;
 }
 .trip{
-
-    padding: 20px;
     height: 20%;
     width:50%;
     position: absolute center;
+    left: -5%;
+    top:-9%;
 }
 .layer{
     display:block;
