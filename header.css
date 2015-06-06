@@ -91,6 +91,14 @@ body {
   left: -6%;
   top: -5%;
 }
+.layer{
+    display:block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
@@ -196,6 +204,9 @@ body {
   /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
+  }
+  .background{
+    left: -10%;
   }
   /* Handle the widths */
   .masthead,
