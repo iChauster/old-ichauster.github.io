@@ -87,7 +87,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background-image : url(http://www.pedals2people.org/wp-content/uploads/2011/07/Space.jpg)no-repeat center center fixed;
+    background-image : url(http://www.pedals2people.org/wp-content/uploads/2011/07/Space.jpg);
     background-repeat :no-repeat;
     background-attachment: fixed;
   -webkit-background-size: cover;
