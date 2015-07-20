@@ -82,7 +82,7 @@ hr.star-primary:after {
 .header{
     height:100%;
     width:100%;
-    background-attachment: fixed
+    background-attachment: fixed;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
