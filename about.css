@@ -118,6 +118,8 @@ header .intro-text .skills {
     header .container {
         padding-top: 350px;
         padding-bottom: 350px;
+        height: 100%;
+        width:100%;
     }
 
     header .intro-text .name {
