@@ -79,14 +79,19 @@ hr.star-primary:after {
 .img-centered {
     margin: 0 auto;
 }
-
+.header{
+    height:100%;
+    width:100%;
+    background-attachment: fixed
+}
 header {
     text-align: center;
     color: #fff;
     background-image : url(http://www.pedals2people.org/wp-content/uploads/2011/07/Space.jpg);
     background-repeat :no-repeat;
     background-attachment: fixed;
-
+    height:100%;
+    width:100%;
 }
 
 header .container {
