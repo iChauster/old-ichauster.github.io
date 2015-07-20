@@ -92,6 +92,8 @@ header {
 header .container {
     padding-top: 100px;
     padding-bottom: 50px;
+    height: 100%;
+    width: 100%;
 }
 
 header img {
