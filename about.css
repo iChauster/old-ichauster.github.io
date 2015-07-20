@@ -79,15 +79,7 @@ hr.star-primary:after {
 .img-centered {
     margin: 0 auto;
 }
-.header{
-    height:100%;
-    width:100%;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+
 header {
     text-align: center;
     color: #fff;
