@@ -77,18 +77,19 @@
 <script>
  Site = (function(){
  	var inception = new Date("30 July 2015 9:45:00");
- 	findDifference = (function(){
+ 	setInterval(function(){
  		 	var current = new Date();
  		 	var time = current - inception;
  		 	var misplace = time / (1000*60*60*24);
  		 	var decimal = misplace.toFixed(9).toString().split('.');
- 		 	$age.text(decimal[0]+"."decimal[1]);
+ 		 	$age.text(decimal[0]+"."+decimal[1]);
  	},10);
  $(document).ready(function(){
- 	$age = $('age');
+ 	$age = $('#age');
  });
  }())
 </script>
+
 <script>
   window.fbAsyncInit = function() {
     FB.init({
