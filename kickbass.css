@@ -42,7 +42,7 @@ body{
 @font-face{
 	font-family:Nexa;
 	font-weight:bold;
-	src:url("nexa/NexaBold.otf") format("opentype");;
+	src:url(nexa/NexaBold.otf) format("opentype");
 }
 }
 footer {
@@ -56,7 +56,7 @@ footer h3 {
 }
 footer a{
 	color: #fff;
-	font-family:"Nexa","Helvetica Neue";
+	font-family:Nexa,"Helvetica Neue";
 	font-weight:bold;
 }
 
