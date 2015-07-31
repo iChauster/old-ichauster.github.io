@@ -93,6 +93,7 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+
 <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -121,5 +122,27 @@
  	$age = $('#age');
  });
  }())
-</script></body>
+</script>
+<script>
+$(function () {
+    var header = $('header');
+    var backgrounds = [
+      'url(https://s3.amazonaws.com/vice_asset_uploader/files/1411511060LH_SH01.png)', 
+      'url(https://s3.amazonaws.com/vice_asset_uploader/files/1411511064FF_SH01.png)',
+      'url(http://invisiblelightnetwork.com/wp-content/uploads/2014/10/LH_SH02.jpg)'
+      ];
+    var current = 0;
+
+    function nextBackground() {
+        header.css(
+            'background',
+        backgrounds[current = ++current % backgrounds.length]);
+
+        setTimeout(nextBackground, 10);
+    }
+    setTimeout(nextBackground, 10);
+    header.css('background', backgrounds[0]);
+});
+</script>
+</body>
 </html>
