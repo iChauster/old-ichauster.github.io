@@ -4,7 +4,7 @@ body {
 	height:100%;
 }
 body{
-	font-family: "Helvetica Neue";
+	font-family: "Helvetica Neue","Source Sans Pro";
 
 }
 .header {
@@ -31,3 +31,4 @@ body{
 
     font-weight: 700;
 }
+
