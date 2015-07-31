@@ -123,23 +123,24 @@
  });
  }())
 </script>
-<!---
+
 <script>
 $(function () {
     var header = $('header');
     var backgrounds = [
-      'url(https://s3.amazonaws.com/vice_asset_uploader/files/1411511060LH_SH01.png) no-repeat center center scroll', 
-      'url(https://s3.amazonaws.com/vice_asset_uploader/files/1411511064FF_SH01.png) no-repeat center center scroll',
-      'url(http://invisiblelightnetwork.com/wp-content/uploads/2014/10/LH_SH02.jpg) no-repeat center center scroll',
-      'url(http://i.imgur.com/K578SYG.png) no-repeat center center scroll',
-      'url(http://www.awn.com/sites/default/files/styles/original/public/image/featured/1020858-iln-creates-visuals-porter-robinsons-worlds-tour.jpg?itok=pZY37viT) no-repeat center center scroll'
+      'url(https://s3.amazonaws.com/vice_asset_uploader/files/1411511060LH_SH01.png)', 
+      'url(https://s3.amazonaws.com/vice_asset_uploader/files/1411511064FF_SH01.png)',
+      'url(http://invisiblelightnetwork.com/wp-content/uploads/2014/10/LH_SH02.jpg)',
+      'url(http://i.imgur.com/K578SYG.png)',
+      'url(http://www.awn.com/sites/default/files/styles/original/public/image/featured/1020858-iln-creates-visuals-porter-robinsons-worlds-tour.jpg?itok=pZY37viT)'
+      'url(https://dymndadxm.files.wordpress.com/2014/11/fetegqp.png)'
       ];
     var current = 0;
 
     function nextBackground() {
         header.css(
             'background',
-        backgrounds[current = ++current % backgrounds.length]);
+        backgrounds[current = ++current % backgrounds.length] + "no repeat center center scroll");
 
         setTimeout(nextBackground, 5000);
     }
@@ -147,6 +148,5 @@ $(function () {
     header.css('background', backgrounds[0]);
 });
 </script>
--->
 </body>
 </html>
