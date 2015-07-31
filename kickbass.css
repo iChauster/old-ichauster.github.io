@@ -34,6 +34,11 @@ body{
 .fb-like{
 	color:#fff;
 }
+#age {
+	font-size:1em;
+	padding:10px;
+	
+}
 footer {
     color: #6B0000;
 }
