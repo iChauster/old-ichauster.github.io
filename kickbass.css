@@ -40,9 +40,9 @@ body{
 	padding:10px;
 
 @font-face{
-	font-family:'Nexa';
+	font-family:'Nexa Bold';
 	font-weight:bold;
-	src:url('Nexa_Bold.otf') format("opentype");
+	src:url('nexa/Nexa_Bold.otf') format("opentype");
 }
 }
 footer {
@@ -56,7 +56,7 @@ footer h3 {
 }
 footer a{
 	color: #fff;
-	font-family:'Nexa';
+	font-family:'Nexa Bold';
 }
 
 footer .footer-above {
