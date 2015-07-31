@@ -22,6 +22,7 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <script charset="utf-8" src="//code.jquery.com/jquery.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -91,22 +92,7 @@
  }())
 </script>
 -->
-<script>
- Site = (function(){
-          var dob = new Date("13 September 2000 1:30:00");
-          setInterval(function(){
-            var now = new Date();
-            var duration = now - dob;
-            var years = duration / 31556900000;
-            var majorMinor = years.toFixed(9).toString().split('.');
-            $age.text(majorMinor[0] + "." + majorMinor[1]);
-          }, 10);
-          $(document).ready(function(){
-            $age = $('#age');
-          });
-        }())
 
-</script>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -136,6 +122,22 @@
 
   ga('create', 'UA-63544380-1', 'auto');
   ga('send', 'pageview');
+
+</script>
+<script>
+ Site = (function(){
+          var dob = new Date("13 September 2000 1:30:00");
+          setInterval(function(){
+            var now = new Date();
+            var duration = now - dob;
+            var years = duration / 31556900000;
+            var majorMinor = years.toFixed(9).toString().split('.');
+            $age.text(majorMinor[0] + "." + majorMinor[1]);
+          }, 10);
+          $(document).ready(function(){
+            $age = $('#age');
+          });
+        }())
 
 </script>
 </body>
