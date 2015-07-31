@@ -34,7 +34,7 @@ body{
 .fb-like{
 	color:#fff;
 }
-@media only screen and (max-device-width: 400px) {
+@media only screen and (max-device-width: 680px) {
 	.text-vertical-center h1{
 	color:#fff;
 	margin: 0;
