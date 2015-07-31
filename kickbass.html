@@ -75,23 +75,6 @@
     </footer>
 
 
-<!--
-<script>
- Site = (function(){
- 	var inception = new Date("30 July 2015 9:45:00");
- 	setInterval(function(){
- 		 	var current = new Date();
- 		 	var time = current - inception;
- 		 	var misplace = time / (1000*60*60*24);
- 		 	var decimal = misplace.toFixed(9).toString().split('.');
- 		 	$age.text(decimal[0]+"."+decimal[1]);
- 	},10);
- $(document).ready(function(){
- 	$age = $('#age');
- });
- }())
-</script>
--->
 
 <script>
   window.fbAsyncInit = function() {
@@ -126,19 +109,17 @@
 </script>
 <script>
  Site = (function(){
-          var dob = new Date("13 September 2000 1:30:00");
-          setInterval(function(){
-            var now = new Date();
-            var duration = now - dob;
-            var years = duration / 31556900000;
-            var majorMinor = years.toFixed(9).toString().split('.');
-            $age.text(majorMinor[0] + "." + majorMinor[1]);
-          }, 10);
-          $(document).ready(function(){
-            $age = $('#age');
-          });
-        }())
-
-</script>
-</body>
+ 	var inception = new Date("30 July 2015 9:45:00");
+ 	setInterval(function(){
+ 		 	var current = new Date();
+ 		 	var time = current - inception;
+ 		 	var misplace = time / (1000*60*60*24);
+ 		 	var decimal = misplace.toFixed(9).toString().split('.');
+ 		 	$age.text(decimal[0]+"."+decimal[1]);
+ 	},10);
+ $(document).ready(function(){
+ 	$age = $('#age');
+ });
+ }())
+</script></body>
 </html>
