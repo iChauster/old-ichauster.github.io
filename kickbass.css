@@ -54,7 +54,10 @@ p{
 footer {
     color: #6B0000;
 }
-
+strong{
+	font-size:1em;
+	font-family:inherit;
+}
 footer h3 {
     margin-bottom: 10px;
     font-family:"Lato";
