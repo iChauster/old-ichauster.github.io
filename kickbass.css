@@ -1,15 +1,11 @@
 html,
-@font-face{
-	font-family:'Nexa Bold';
-	font-weight:bold;
-	src:url('nexa/Nexa_Bold.otf') format("opentype");
-}
+
 body {
 	width:100%;
 	height:100%;
 }
 body{
-	font-family: "Helvetica Neue",'Nexa Bold',Source Sans Pro;
+	font-family: "Helvetica Neue",'Nexa Bold',"Source Sans Pro";
 
 }
 
@@ -45,7 +41,11 @@ body{
 	font-size:2em;
 	padding:10px;
 }
-
+@font-face{
+	font-family:'Nexa Bold';
+	font-weight:bold;
+	src:url('nexa/Nexa_Bold.otf') format("opentype");
+}
 p{
 	font-family:'Nexa Bold';
 }
