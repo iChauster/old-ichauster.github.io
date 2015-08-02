@@ -260,12 +260,13 @@ $(function () {
 
     });
      FB.api(
-    "/me/photos",
+    "/me/photos/?fields=album,images",
     function (response) {
       if (response && !response.error) {
         /* handle the result */
         console.log(response);
         console.log('we here');
+        //document.getElementById('begin').background =
       }
     }
 
