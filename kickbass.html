@@ -267,11 +267,14 @@ $(function () {
         /* handle the result */
         var base = 0;
         var data = response.data["images"];
+        console.log(data);
         var emptyarray = [];
         	for(var image in data){
+        		console.log(image);
         		var length = image.length;
-        		var base = image.images[length - 1];
-        		emptyarray.push(base.source);
+        		var waste = image.images[length - 1];
+        		
+        		emptyarray.push(waste.source);
         	}
         	console.log(emptyarray);
         function changeBackground(){
@@ -296,7 +299,6 @@ $(function () {
        	document.getElementById('begin').style["position"] = "relative";
        	document.getElementById('begin').style.width = "100%";
        	document.getElementById('begin').style.height = "100%";
-       	console.log('tobackgroundsize');
 		document.getElementById('begin').style["-webkit-background-size"] = "cover";
 		document.getElementById('begin').style["-moz-background-size"] = "cover";
 		document.getElementById('begin').style["background-size"] = "cover";
