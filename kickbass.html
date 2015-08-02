@@ -266,10 +266,10 @@ $(function () {
         /* handle the result */
         console.log(response);
         console.log('we here');
-        console.log(response.data);
-        console.log(response.data[2]);
-        console.log(response.data[0].images.source);
-        document.getElementById('begin').background = response.data.images.source;
+        console.log("rsp.data:" + response.data);
+        console.log("array usage of index 2:" + response.data[2]);
+        console.log("accessing key of source:" + response.data[0].images[0].source);
+        //document.getElementById('begin').background = response.data.images.source;
       }
     }
 
