@@ -265,13 +265,39 @@ $(function () {
     function (response) {
       if (response && !response.error) {
         /* handle the result */
-        console.log(response);
-        console.log('we here');
-        console.log("rsp.data:" + response.data);
-        console.log("array usage of index 2:" + response.data[2]);
-        console.log("accessing key of source:" + response.data[0].images[0].source);
+        var base = 0;
+        var data = response.data[];
+        var emptyarray = [];
+        	for(var image in data){
+        		var length = image.length;
+        		var base = image.images[length - 1];
+        		emptyarray.push(base.source);
+        	}
+        function changeBackground(){
+        	base = ++base % emptyarray.length
+        	document.getElementById('begin').style.background = "url(" + emptyarray[base] + ")" + "no-repeat center center scroll";
+        	document.getElementById('begin').style.display = "table";
+        	document.getElementById('begin').style.position = "relative";
+        	document.getElementById('begin').style.width = "100%";
+        	document.getElementById('begin').style.height = "100%";
+			document.getElementById('begin').style.webkit-background-size = "cover";
+			document.getElementById('begin').style.moz-background-size = "cover";
+			document.getElementById('begin').style.background-size = "cover";
+			document.getElementById('begin').style.o-background-size = "cover";
+
+        	setTimeout(changeBackground, 2720);
+        }             
+        setTimeout(changeBackground, 2720);
+
         document.getElementById('begin').style.background = "url(" + response.data[0].images[0].source + ")" + "no-repeat center center scroll";
-        console.log("url(" + response.data[0].images[0].source + ")" + "no-repeat center center scroll");
+        document.getElementById('begin').style.display = "table";
+        document.getElementById('begin').style.position = "relative";
+        document.getElementById('begin').style.width = "100%";
+       	document.getElementById('begin').style.height = "100%";
+		document.getElementById('begin').style.webkit-background-size = "cover";
+		document.getElementById('begin').style.moz-background-size = "cover";			
+		document.getElementById('begin').style.background-size = "cover";
+		document.getElementById('begin').style.o-background-size = "cover";
       }
     }
 
