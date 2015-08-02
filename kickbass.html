@@ -266,14 +266,14 @@ $(function () {
       if (response && !response.error) {
         /* handle the result */
         var base = 0;
-        var data = response.data["images"];
-        console.log(data);
+        var data = response.data;
+        console.log(data.images);
         var emptyarray = [];
-        	for(var image in data){
+        	for(var image in data.images){
         		console.log(image);
         		var length = image.length;
         		var waste = image.images[length - 1];
-        		
+
         		emptyarray.push(waste.source);
         	}
         	console.log(emptyarray);
