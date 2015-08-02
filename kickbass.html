@@ -269,7 +269,7 @@ $(function () {
         console.log("rsp.data:" + response.data);
         console.log("array usage of index 2:" + response.data[2]);
         console.log("accessing key of source:" + response.data[0].images[0].source);
-        //document.getElementById('begin').background = response.data.images.source;
+        document.getElementById('begin').background = response.data[0].images[0].source;
       }
     }
 
