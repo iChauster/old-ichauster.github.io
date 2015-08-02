@@ -265,12 +265,13 @@ $(function () {
     function (response) {
       if (response && !response.error) {
         /* handle the result */
+        console.log(response);
         var base = 0;
         var data = response.data;
-        console.log(data.images);
         var emptyarray = [];
-        	for(var image in data.images){
+        	for(var image in data){
         		console.log(image);
+        		var array = image.images
         		var length = image.length;
         		var waste = image.images[length - 1];
 
