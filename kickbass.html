@@ -266,7 +266,7 @@ $(function () {
       if (response && !response.error) {
         /* handle the result */
         var base = 0;
-        var data = response.data;
+        var data = response.data["images"];
         var emptyarray = [];
         	for(var image in data){
         		var length = image.length;
