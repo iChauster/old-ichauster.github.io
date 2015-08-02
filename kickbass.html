@@ -270,12 +270,8 @@ $(function () {
         //var data = response.data;
         console.log(response.data);
         var emptyarray = [];
-        	for(var image in response.data){
-        		console.log(image);
-        		var array = image.images;
-        		var waste = array[0];
-
-        		emptyarray.push(waste.source);
+        	for(var i =0; i < response.data.length; i ++;){
+				emptyarray.push(response.data[i].images[0].source);
         	}
         	console.log(emptyarray);
         function changeBackground(){
