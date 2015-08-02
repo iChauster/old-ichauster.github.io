@@ -237,16 +237,7 @@ $(function () {
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
-  FB.api(
-    "/{user-id}/photos",
-    function (response) {
-      if (response && !response.error) {
-        /* handle the result */
-        console.log(response);
-      }
-    }
 
-  );
 };
 
   // Load the SDK asynchronously
@@ -266,7 +257,18 @@ $(function () {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+
     });
+     FB.api(
+    "/{user-id}/photos",
+    function (response) {
+      if (response && !response.error) {
+        /* handle the result */
+        console.log(response);
+      }
+    }
+
+  );
   }
 
 
