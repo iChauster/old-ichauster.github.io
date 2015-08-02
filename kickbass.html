@@ -267,9 +267,9 @@ $(function () {
         /* handle the result */
         console.log(response);
         var base = 0;
-        var data = response.data;
+        //var data = response.data;
         var emptyarray = [];
-        	for(var image in data){
+        	for(var image in response.data){
         		console.log(image);
         		var array = image.images;
         		var length = array.length;
