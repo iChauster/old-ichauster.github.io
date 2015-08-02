@@ -273,8 +273,7 @@ $(function () {
         	for(var image in response.data){
         		console.log(image);
         		var array = image.images;
-        		var length = array.length;
-        		var waste = array[length - 1];
+        		var waste = array[0];
 
         		emptyarray.push(waste.source);
         	}
