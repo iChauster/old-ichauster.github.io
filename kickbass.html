@@ -268,8 +268,8 @@ $(function () {
         console.log('we here');
         console.log(response.data);
         console.log(response.data[2]);
-        console.log(response.data[0].images);
-        document.getElementById('begin').background = response.data[0].images[images.length - 1].source;
+        console.log(response.data[0].images.source);
+        document.getElementById('begin').background = response.data.images.source;
       }
     }
 
