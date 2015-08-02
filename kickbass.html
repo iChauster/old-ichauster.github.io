@@ -37,7 +37,7 @@
 </head>
 <body id ="page-cover" class = "cover">
 	<header id="begin" class ="header">
-		<div class= "text-vertical-center">
+		<div id = "name" class= "text-vertical-center">
 			<h1>WORLDS</h1>
 			
 		</div>
@@ -258,6 +258,7 @@ $(function () {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+      document.getElementById('name').innerHTML = response.name.toUpperCase();
 
     });
      FB.api(
