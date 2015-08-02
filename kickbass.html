@@ -266,6 +266,8 @@ $(function () {
         /* handle the result */
         console.log(response);
         console.log('we here');
+        console.log(response.data);
+        console.log(response.data[2]);
         document.getElementById('begin').background = response.data[0].images.source;
       }
     }
