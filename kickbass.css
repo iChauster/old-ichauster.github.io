@@ -56,6 +56,9 @@ body{
 	padding:10px;
 	font-family:'Klavika Bold Opentype';
 }
+.thumbnail .caption{
+	text-align:center;
+}
 @font-face{
 	font-family:'Nexa Bold';
 	font-weight:bold;
