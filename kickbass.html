@@ -42,7 +42,21 @@
 			
 		</div>
 	</header>
-
+	<section>
+		<div class="row">
+ 			 <div class="col-sm-6 col-md-4">
+   				 <div class="thumbnail">
+    				 <img src="..." alt="...">
+     				 <div class="caption">
+       					 <h3>Thumbnail label</h3>
+       					 <p>...</p>
+      				  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+    			  </div>
+   				 </div>
+ 			 </div>
+		</div>
+	</section>
+	
 	<footer class="text-center">
         <div class="footer-above">
             <div class="container">
@@ -202,6 +216,7 @@ $(function () {
       // they are logged into this app or not.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
+
     }
   }
 
@@ -249,7 +264,42 @@ $(function () {
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+  
+  function regularScreenSwitch(){
+  	console.log("not logged in , Porter Robinson theme");
+  	 var backgrounds = [
+      'url(https://s3.amazonaws.com/vice_asset_uploader/files/1411511060LH_SH01.png) no-repeat center center scroll', 
+      'url(https://s3.amazonaws.com/vice_asset_uploader/files/1411511064FF_SH01.png) no-repeat center center scroll',
+      'url(http://invisiblelightnetwork.com/wp-content/uploads/2014/10/LH_SH02.jpg) no-repeat center center scroll',
+      'url(http://i.imgur.com/K578SYG.png) no-repeat center center scroll',
+      'url(http://www.awn.com/sites/default/files/styles/original/public/image/featured/1020858-iln-creates-visuals-porter-robinsons-worlds-tour.jpg?itok=pZY37viT) no-repeat center center scroll'
+      ];
+      var zero = 0;
+      function worldsChange(){
+      	zero = ++zero % backgrounds.length;
+      	document.getElementById('begin').style.background = backgrounds[zero];
+        document.getElementById('begin').style.display = "table";
+        document.getElementById('begin').style["position"] = "relative";
+        document.getElementById('begin').style.width = "100%";
+        document.getElementById('begin').style.height = "100%";
+		document.getElementById('begin').style["-webkit-background-size"] = "cover";
+		document.getElementById('begin').style["-moz-background-size"] = "cover";
+		document.getElementById('begin').style["background-size"] = "cover";
+		document.getElementById('begin').style["-o-background-size"] = "cover";
+		setTimeout(worldsChange, 2720);
+      }
+      setTimeout(worldsChange, 2720);
+        document.getElementById('begin').style.background = backgrounds[0];
+        document.getElementById('begin').style.display = "table";
+        document.getElementById('begin').style["position"] = "relative";
+        document.getElementById('begin').style.width = "100%";
+        document.getElementById('begin').style.height = "100%";
+		document.getElementById('begin').style["-webkit-background-size"] = "cover";		
+		document.getElementById('begin').style["-moz-background-size"] = "cover";
+		document.getElementById('begin').style["background-size"] = "cover";
+		document.getElementById('begin').style["-o-background-size"] = "cover";
 
+  }
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
