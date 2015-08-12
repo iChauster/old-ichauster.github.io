@@ -47,12 +47,21 @@ body{
 	font-weight: 300;
 	padding:10px;
 }
-
+@font-face{
+	font-family:'Klavika Bold Opentype';
+	font-weight:bold;
+	src:url('ufonts.com_klavika-bold-opentype.otf') format("opentype");
+}
+.collection{
+	padding:10px;
+	font-family:'Klavika Bold Opentype';
+}
 @font-face{
 	font-family:'Nexa Bold';
 	font-weight:bold;
 	src:url('nexa/Nexa Bold.otf') format("opentype");
 }
+
 p{
 	font-family:'Nexa Bold';
 }
