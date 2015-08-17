@@ -318,15 +318,12 @@ $(function () {
     function (response) {
       if (response && !response.error) {
         /* handle the result */
-        console.log(response);
         var base = 0;
         //var data = response.data;
-        console.log(response.data);
         var emptyarray = [];
         	for(var i = 0; i < response.data.length; i ++){
 				emptyarray.push(response.data[i].images[0].source);
         	}
-        	console.log(emptyarray);
         function changeBackground(){
         	console.log('changeBackground');
         	base = ++base % emptyarray.length;
