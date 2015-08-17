@@ -357,7 +357,80 @@ $(function () {
     }
 
   );
-	FB.api("/me/feed?fields=application,full_picture", function (response) {
+	FB.api(
+  		'/me/feed',
+  		'GET',
+  		{"fields":"application,full_picture"},
+  		function (response) {
+      		// Insert your code here
+      		if (response && !response.error) {
+				console.log('loading pictures...');
+				console.log(response);
+				var base = 0;
+				console.log(response.data);
+				console.log(response.data[0].application.name);
+				console.log(response.data[0].application);
+				var picturesArray = [];
+					for(var i = 0; i < response.data.length; i++){
+						console.log(response.data[i]);
+						var name = response.data[i].application.id;
+						if (name == "648458165270631"){
+							var imageBase = response.data[i];
+							picturesArray.push(imageBase["full_picture"]);
+						}
+					
+					}
+				console.log(picturesArray);
+
+				function uploadPictures(){
+					console.log('uploading Pics');
+					base = ++base;
+					for(var i = 0; i < picturesArray.length; i ++){
+						var iDiv = document.createElement('div');
+						iDiv.id = 'photo';
+						iDiv.className = 'col-sm-6 col-md-4';
+						document.getElementById('rowd').appendChild(iDiv);
+						var thumbnail = document.createElement('div');
+						thumbnail.className = 'thumbnail';
+						iDiv.appendChild(thumbnail);
+						var realImage = document.createElement('img');
+						realImage.src = pictures[i];
+						console.log(pictures[i]);
+						realImage.alt = "http://www.jenningswire.com/wp-content/uploads/2013/03/testanxiety.jpg"
+						thumbnail.appendChild(realImage);
+						var caption = document.createElement('div');
+						caption.className = 'caption';
+						thumbnail.appendChild(caption);
+						var hacche = document.createElement('h3');
+						hacche = 'Caption';
+						caption.appendChild(hacche);
+						var pea = document.createElement('p');
+						p = 'Description';
+						caption.appendChild(p);
+						var buttonrow = document.createElement('p');
+						var like = document.createElement('a');
+						var share = document.createElement('a');
+						like.href ='#';
+						like.class='btn btn-primary';
+						like.role = 'button';
+						like = 'Upvote';
+						buttonrow.appendChild(like);
+						share.href ='#';
+						share.class='btn btn-default';
+						share.role = 'button';
+						share = 'Share';
+						buttonrow.appendChild(share);
+						caption.appendChild(buttonrow);
+					}
+					
+
+				}
+				uploadPictures();
+			}
+
+  		}
+);
+	/*FB.api("/me/feed?fields=application,full_picture", function (response) {
 			if (response && !response.error) {
 				console.log('loading pictures...');
 				console.log(response);
@@ -424,7 +497,7 @@ $(function () {
 			}
 
 		}
-	);
+	); */
   }
 
 
