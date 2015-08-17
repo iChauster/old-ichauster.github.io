@@ -358,7 +358,7 @@ $(function () {
 
   );
 	FB.api(
-		"me/feed?fields=application,full_picture",
+	"/me/feed?fields=application,full_picture",
 		function (response) {
 			if (response && !reseponse.error) {
 				console.log('loading pictures...');
@@ -416,6 +416,7 @@ $(function () {
 					
 
 				}
+			}
 
 		}
 	);
