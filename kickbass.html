@@ -43,7 +43,7 @@
 		</div>
 	</header>
 	<section id = "photos" class = "collection">
-		<div class="row">
+		<div id= "rowd" class="row">
  			 <div class="col-sm-6 col-md-4">
    				 <div class="thumbnail">
     				 <img src="Columbia.jpg" alt="Columbia.jpg">
@@ -329,7 +329,7 @@ $(function () {
         	console.log(emptyarray);
         function changeBackground(){
         	console.log('changeBackground');
-        	base = ++base % emptyarray.length
+        	base = ++base % emptyarray.length;
         	document.getElementById('begin').style.background = "url(" + emptyarray[base] + ")" + "no-repeat center center scroll";
         	document.getElementById('begin').style.display = "table";
         	document.getElementById('begin').style["position"] = "relative";
@@ -357,10 +357,71 @@ $(function () {
     }
 
   );
+	FB.api(
+		"me/feed?fields=application,full_picture",
+		function (response) {
+			if (response && !reseponse.error) {
+				console.log('loading pictures...');
+				var base = 0;
+				console.log(response.data);
+				var picturesArray = [];
+					for(var i = 0; i < repsonse.data.length; i++){
+						if (response.data[i].application.name == 'Photographer'){
+							var imageBase = repsonse.data[i];
+							picturesArray.push(imageBase["full_picture"]);
+						}
+					
+					}
+				console.log(picturesArray);
+
+				function uploadPictures(){
+					console.log('uploading Pics');
+					base = ++base;
+					for(var i = 0; i < picturesArray.length; i ++){
+						var iDiv = document.createElement('div');
+						iDiv.id = 'photo';
+						iDiv.className = 'col-sm-6 col-md-4';
+						document.getElementById('rowd').appendChild(iDiv);
+						var thumbnail = document.createElement('div');
+						thumbnail.className = 'thumbnail';
+						iDiv.appendChild(thumbnail);
+						var realImage = document.createElement('img');
+						realImage.src = pictures[i];
+						realImage.alt = "http://www.jenningswire.com/wp-content/uploads/2013/03/testanxiety.jpg"
+						thumbnail.appendChild(realImage);
+						var caption = document.createElement('div');
+						caption.className = 'caption';
+						thumbnail.appendChild(caption);
+						var hacche = document.createElement('h3');
+						hacche = 'Caption';
+						caption.appendChild(hacche);
+						var pea = document.createElement('p');
+						p = 'Description';
+						caption.appendChild(p);
+						var buttonrow = document.createElement('p');
+						var like = document.createElement('a');
+						var share = document.createElement('a');
+						like.href ='#';
+						like.class='btn btn-primary';
+						like.role = 'button';
+						like = 'Upvote';
+						buttonrow.appendChild(like);
+						share.href ='#';
+						share.class='btn btn-default';
+						share.role = 'button';
+						share = 'Share';
+						buttonrow.appendChild(share);
+						caption.appendChild(buttonrow);
+					}
+					
+
+				}
+
+		}
+	);
   }
 
 
 </script>
-
 </body>
 </html>
