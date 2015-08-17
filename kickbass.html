@@ -360,7 +360,7 @@ $(function () {
 	FB.api(
 	"/me/feed?fields=application,full_picture",
 		function (response) {
-			if (response && !reseponse.error) {
+			if (response && !response.error) {
 				console.log('loading pictures...');
 				var base = 0;
 				console.log(response.data);
