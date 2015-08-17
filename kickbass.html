@@ -399,10 +399,12 @@ $(function () {
 						caption.className = 'caption';
 						thumbnail.appendChild(caption);
 						var hacche = document.createElement('h3');
-						hacche = 'Caption';
+						var textNode = document.createTextNode('Caption');
+						hacche.appendChild(textNode);
 						caption.appendChild(hacche);
 						var pea = document.createElement('p');
-						p = 'Description';
+						var desc = document.createTextNode('Description');
+						pea.appendChild(desc);
 						caption.appendChild(p);
 						var buttonrow = document.createElement('p');
 						var like = document.createElement('a');
@@ -410,12 +412,14 @@ $(function () {
 						like.href ='#';
 						like.class='btn btn-primary';
 						like.role = 'button';
-						like = 'Upvote';
+						var as = document.createTextNode('Upvote');
+						like.appendChild(as);
 						buttonrow.appendChild(like);
 						share.href ='#';
 						share.class='btn btn-default';
 						share.role = 'button';
-						share = 'Share';
+						var shr = document.createTextNode('Share');
+						share.appendChild(shr);
 						buttonrow.appendChild(share);
 						caption.appendChild(buttonrow);
 					}
