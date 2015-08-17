@@ -363,6 +363,8 @@ $(function () {
 				console.log(response);
 				var base = 0;
 				console.log(response.data);
+				console.log(response.data[0].application.name);
+				console.log(response.data[0].application);
 				var picturesArray = [];
 					for(var i = 0; i < response.data.length; i++){
 						if (response.data[i].application.name == 'Photographer'){
