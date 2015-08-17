@@ -368,9 +368,8 @@ $(function () {
 				var picturesArray = [];
 					for(var i = 0; i < response.data.length; i++){
 
-						console.log(response.data[i].application.name);
-
-						if (response.data[i].application.name == 'Photographer'){
+						var name = response.data[i].application.name;
+						if (name == "Photographer"){
 							var imageBase = response.data[i];
 							picturesArray.push(imageBase["full_picture"]);
 						}
