@@ -396,7 +396,7 @@ $(function () {
 							if (response.data[i].application.name == "Photographer"){
 								var imageBase = response.data[i];
 								//picturesArray.push(imageBase["full_picture"]);
-								var post = new Post(imageBase["full_picture"],imageBase.caption, imageBase.description), imageBase.id;
+								var post = new Post(imageBase["full_picture"],imageBase.caption, imageBase.description, imageBase.id);
 								picturesArray.push(post);
 							}
 						}else if(typeof response.data[i].application === "undefined"){
