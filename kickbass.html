@@ -109,6 +109,13 @@
 </script>
 
 <script src="js/jquery.js"></script>
+<script type="text/jquery">
+	
+
+
+
+
+</script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -361,7 +368,7 @@ $(function () {
   		{"fields":"application,full_picture,caption,description"},
   		function (response) {
       		// Insert your code here
-      		var Post = function(photo, caption, description){
+      		var Post = function(photo, caption, description, postid){
 				this.photo = photo;
 				if(typeof caption === "undefined"){
 					console.log('no caption');
@@ -375,6 +382,7 @@ $(function () {
 				}else{
 					this.description = description;
 				}
+				this.postid = postid;
 			}
       	
       		if (response && !response.error) {
@@ -388,7 +396,7 @@ $(function () {
 							if (response.data[i].application.name == "Photographer"){
 								var imageBase = response.data[i];
 								//picturesArray.push(imageBase["full_picture"]);
-								var post = new Post(imageBase["full_picture"],imageBase.caption, imageBase.description);
+								var post = new Post(imageBase["full_picture"],imageBase.caption, imageBase.description), imageBase.id;
 								picturesArray.push(post);
 							}
 						}else if(typeof response.data[i].application === "undefined"){
@@ -433,6 +441,8 @@ $(function () {
 						like.href ='#';
 						like.className ='btn btn-primary';
 						like.setAttribute("role","button");
+						var fun = "Like(" + item.postid + ")";
+						like.setAttribute("onclick",fun);
 						var as = document.createTextNode('Upvote');
 						like.appendChild(as);
 						buttonrow.appendChild(like);
@@ -452,6 +462,17 @@ $(function () {
 
   		}
 	);
+	var Like = function(postid){
+		FB.api(
+    	"/"+postid+"/likes",
+   		 "POST",
+    	function (response) {
+     		if (response && !response.error) {
+     			console.log('bullseye');
+      		}
+   		 }
+		);
+	}
 	
   }
 
