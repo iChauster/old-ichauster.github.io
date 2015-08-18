@@ -435,6 +435,8 @@ $(function () {
 						like.className ='btn btn-primary';
 						var object = item.postid;
 						console.log(object);
+						var as = document.createTextNode('Like');
+
 						like.onclick = function(){
 							console.log('inside');
 							FB.api(
@@ -446,9 +448,9 @@ $(function () {
       								}
     						}
 							);
+							as = document.createTextNode('Liked!');
 						}
 						
-						var as = document.createTextNode('Upvote');
 						like.appendChild(as);
 						buttonrow.appendChild(like);
 						share.href ='#';
