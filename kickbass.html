@@ -257,11 +257,7 @@ $(function () {
   });
 
 };
-	var Post = function(photo, caption, description){
-		this.photo = photo;
-		this.caption = caption;
-		this.description = description;
-	}
+	
 
   // Load the SDK asynchronously
   (function(d, s, id) {
@@ -365,6 +361,12 @@ $(function () {
   		{"fields":"application,full_picture,caption,description"},
   		function (response) {
       		// Insert your code here
+      		var Post = function(photo, caption, description){
+				this.photo = photo;
+				this.caption = caption;
+				this.description = description;
+			}
+      	
       		if (response && !response.error) {
 				console.log('loading pictures...');
 				console.log(response);
