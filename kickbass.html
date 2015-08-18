@@ -433,7 +433,7 @@ $(function () {
 						//use Facebook API to like/share : https://developers.facebook.com/docs/graph-api/reference/v2.4/object/likes
 						like.href ='#';
 						like.className ='btn btn-primary';
-						var object = item.id;
+						var object = item.postid;
 						console.log(object);
 						like.onclick = function(){
 							FB.api(
