@@ -431,11 +431,11 @@ $(function () {
 						var like = document.createElement('a');
 						var share = document.createElement('a');
 						//use Facebook API to like/share : https://developers.facebook.com/docs/graph-api/reference/v2.4/object/likes
-						//like.href ='#';
+						like.href ='#';
 						like.className ='btn btn-primary';
 						var object = item.postid;
 						console.log(object);
-						like.onclick = function(){
+						/*like.onclick = function(){
 							console.log('inside');
 							FB.api(
    							 "/"+object+"/likes",
@@ -447,8 +447,7 @@ $(function () {
     						}
 							);
 						}
-						var fun = "Like(" + item.postid + ")";
-						like.setAttribute("onclick",fun);
+						*/
 						var as = document.createTextNode('Upvote');
 						like.appendChild(as);
 						buttonrow.appendChild(like);
