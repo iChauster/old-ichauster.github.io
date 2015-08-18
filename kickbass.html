@@ -257,12 +257,10 @@ $(function () {
   });
 
 };
-	class Post {
-		constructor(photo, caption, description) {
-    		this.photo = photo;
-    		this.caption = caption;
-    		this.description = description;
- 		 }
+	var Post = function(photo, caption, description){
+		this.photo = photo;
+		this.caption = caption;
+		this.description = description;
 	}
 
   // Load the SDK asynchronously
