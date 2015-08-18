@@ -433,7 +433,19 @@ $(function () {
 						//use Facebook API to like/share : https://developers.facebook.com/docs/graph-api/reference/v2.4/object/likes
 						like.href ='#';
 						like.className ='btn btn-primary';
-						like.setAttribute("role","button");
+						var object = item.id;
+						console.log(object);
+						like.onclick = function(){
+							FB.api(
+   							 "/"+object+"/likes",
+    						"POST",
+   							 function (response) {
+    							  if (response && !response.error) {
+    							  	console.log('bullseye');
+      								}
+    						}
+							);
+						}
 						var fun = "Like(" + item.postid + ")";
 						like.setAttribute("onclick",fun);
 						var as = document.createTextNode('Upvote');
@@ -455,17 +467,7 @@ $(function () {
 
   		}
 	);
-	var Like = function(postid){
-		FB.api(
-    	"/"+postid+"/likes",
-   		 "POST",
-    	function (response) {
-     		if (response && !response.error) {
-     			console.log('bullseye');
-      		}
-   		 }
-		);
-	}
+	
 	
   }
 
