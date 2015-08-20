@@ -408,7 +408,7 @@ $(function () {
     							if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         							var myArr = JSON.parse(xmlhttp.responseText);
         							console.log(myArr);
-        							disectResponse(myArr);
+        							picturesArray.push(disectResponse(myArr));
     							}
 							}
 							
@@ -424,7 +424,7 @@ $(function () {
 							if (res.data[i].application.name == "Photographer"){
 								var imageBase = res.data[i];
 								var post = new Post(imageBase["full_picture"],imageBase.message, imageBase.description, imageBase.id, imageBase["with_tags"].data, imageBase.from.name);
-								picturesArray.push(post);
+								return post;
 							}
 						}else if(typeof res.data[i].application === "undefined"){
 							console.log('whops');
