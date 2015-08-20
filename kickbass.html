@@ -67,7 +67,7 @@
                         <p>New York, New York </p>
                     </div>
                     <div class="footer-col col-md-4">
-                       <fb:login-button scope="public_profile,email,user_photos,user_posts,publish_actions" onlogin="checkLoginState();" data-auto-logout-link="true">
+                       <fb:login-button scope="public_profile,email,user_photos,user_posts,publish_actions,read_stream" onlogin="checkLoginState();" data-auto-logout-link="true">
 						</fb:login-button>
 						<div id="status">
 						</div>
@@ -357,7 +357,7 @@ $(function () {
 
   );
 	FB.api(
-  		'/me/feed',
+  		'/me/home',
   		'GET',
   		{"fields":"application,full_picture,message,description,with_tags,from"},
   		function (response) {
