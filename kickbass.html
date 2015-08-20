@@ -408,6 +408,7 @@ $(function () {
     							if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         							var myArr = JSON.parse(xmlhttp.responseText);
         							console.log(myArr);
+        							disectResponse(myArr);
     							}
 							}
 							
@@ -416,7 +417,38 @@ $(function () {
 						}
 					
 					}
+					function disectResponse(response){
+						for(var i = 0; i < response.data.length; i++){
+						if(response.data[i] && response.data[i].application){
+							if (response.data[i].application.name == "Photographer"){
+								var imageBase = response.data[i];
+								var post = new Post(imageBase["full_picture"],imageBase.message, imageBase.description, imageBase.id, imageBase["with_tags"].data, imageBase.from.name);
+								picturesArray.push(post);
+							}
+						}else if(typeof response.data[i].application === "undefined"){
+							console.log('whops');
+						}
+
+						if(response.data[i] == lastObject){
+							
+							var xmlhttp = new XMLHttpRequest();
+							var url = response.paging.next;
+
+							xmlhttp.onreadystatechange = function() {
+    							if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        							var myArr = JSON.parse(xmlhttp.responseText);
+        							disectResponse(myArr);
+    							}
+							}
+							
+							xmlhttp.open("GET", url, true);
+							xmlhttp.send();
+						}
+					
+					}
+				}
 				console.log(picturesArray);
+
 
 				function uploadPictures(){
 					console.log('uploading Pics');
