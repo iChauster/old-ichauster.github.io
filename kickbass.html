@@ -51,6 +51,7 @@
        					 <h3>Caption</h3>
        					 <p>Description</p>
       				  <p><a href="#" class="btn btn-primary" role="button">Upvote</a> <a href="#" class="btn btn-default" role="button">Share</a></p>
+      				  <p>USERS</p>
     			  </div>
    				 </div>
  			 </div>
@@ -358,10 +359,10 @@ $(function () {
 	FB.api(
   		'/me/feed',
   		'GET',
-  		{"fields":"application,full_picture,message,description"},
+  		{"fields":"application,full_picture,message,description,with_tags,from"},
   		function (response) {
       		// Insert your code here
-      		var Post = function(photo, message, description, postid){
+      		var Post = function(photo, message, description, postid, withTags, from){
 				this.photo = photo;
 				if(typeof message === "undefined"){
 					console.log('no caption');
@@ -376,6 +377,8 @@ $(function () {
 					this.description = description;
 				}
 				this.postid = postid;
+				this.withTags = withTags;
+				this.from = from;
 			}
       	
       		if (response && !response.error) {
@@ -388,8 +391,7 @@ $(function () {
 						if(response.data[i] && response.data[i].application){
 							if (response.data[i].application.name == "Photographer"){
 								var imageBase = response.data[i];
-								//picturesArray.push(imageBase["full_picture"]);
-								var post = new Post(imageBase["full_picture"],imageBase.message, imageBase.description, imageBase.id);
+								var post = new Post(imageBase["full_picture"],imageBase.message, imageBase.description, imageBase.id, imageBase["with_tags"].data, imageBase.from.name);
 								picturesArray.push(post);
 							}
 						}else if(typeof response.data[i].application === "undefined"){
@@ -460,6 +462,16 @@ $(function () {
 						share.appendChild(shr);
 						buttonrow.appendChild(share);
 						caption.appendChild(buttonrow);
+						var from = item.from;
+						var string = "Posted by : " + from + ", with ";
+						for (i = 0; i < item.withTags.length; i ++){
+							var tags = item.withTags[i].name + ", "
+							string.append(tags);
+						}
+						var tagRow = document.createElement('p');
+						var text = document.createTextNode(string);
+						tagRow.appendChild(text);
+						caption.appendChild(tagRow);
 					}
 					
 
