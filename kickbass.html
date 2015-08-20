@@ -398,7 +398,7 @@ $(function () {
 						}else if(typeof response.data[i].application === "undefined"){
 							console.log('whops');
 						}
-
+						var myArr;
 						if(response.data[i] == lastObject){
 							
 							var xmlhttp = new XMLHttpRequest();
@@ -406,50 +406,58 @@ $(function () {
 
 							xmlhttp.onreadystatechange = function() {
     							if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        							var myArr = JSON.parse(xmlhttp.responseText);
+        							myArr = JSON.parse(xmlhttp.responseText);
         							console.log(myArr);
-        							picturesArray.push(disectResponse(myArr));
+        							swith(myArr);
     							}
 							}
 							
 							xmlhttp.open("GET", url, true);
 							xmlhttp.send();
-						}
-					
-					}
-					function disectResponse(res){
-						var finalObject = res.data[res.data.length - 1];
-						for(var i = 0; i < res.data.length; i++){
-						if(res.data[i] && res.data[i].application){
-							if (res.data[i].application.name == "Photographer"){
-								var imageBase = res.data[i];
-								var post = new Post(imageBase["full_picture"],imageBase.message, imageBase.description, imageBase.id, imageBase["with_tags"].data, imageBase.from.name);
-								return post;
-							}
-						}else if(typeof res.data[i].application === "undefined"){
-							console.log('whops');
 						}
 
-						if(res.data[i] == finalObject){
-							
-							var xmlhttp = new XMLHttpRequest();
-							var url = res.paging.next;
-							console.log(res.paging.next);
+					
+					}
+				console.log(picturesArray);
+
+				function swith(dat){
+
+					console.log('loading pictures...');
+					console.log(dat);
+					var base = 0;
+					console.log(dat.data);
+					var lastObject = dat.data[dat.data.length - 1];
+					var picturesArray = [];
+						for(var i = 0; i < dat.data.length; i++){
+							if(dat.data[i] && dat.data[i].application){
+								if (dat.data[i].application.name == "Photographer"){
+									var imageBase = dat.data[i];
+									var post = new Post(imageBase["full_picture"],imageBase.message, imageBase.description, imageBase.id, imageBase["with_tags"].data, imageBase.from.name);
+									picturesArray.push(post);
+								}
+							}else if(typeof dat.data[i].application === "undefined"){
+								console.log('whops');
+							}
+							var myArr;
+							if(dat.data[i] == lastObject){
+								
+								var xmlhttp = new XMLHttpRequest();
+								var url = dat.paging.next;
+
 							xmlhttp.onreadystatechange = function() {
     							if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        							var myArr = JSON.parse(xmlhttp.responseText);
-        							picturesArray.push(disectResponse(myArr));
+        							myArr = JSON.parse(xmlhttp.responseText);
+        							console.log(myArr);
     							}
 							}
 							
 							xmlhttp.open("GET", url, true);
 							xmlhttp.send();
 						}
+
 					
 					}
 				}
-				console.log(picturesArray);
-
 
 				function uploadPictures(){
 					console.log('uploading Pics');
