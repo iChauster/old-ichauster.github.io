@@ -358,16 +358,16 @@ $(function () {
 	FB.api(
   		'/me/feed',
   		'GET',
-  		{"fields":"application,full_picture,caption,description"},
+  		{"fields":"application,full_picture,message,description"},
   		function (response) {
       		// Insert your code here
-      		var Post = function(photo, caption, description, postid){
+      		var Post = function(photo, message, description, postid){
 				this.photo = photo;
-				if(typeof caption === "undefined"){
+				if(typeof message === "undefined"){
 					console.log('no caption');
-					this.caption = "";
+					this.message = "";
 				}else{
-					this.caption = caption;
+					this.message = caption;
 				}
 				if(typeof description === "undefined"){
 					console.log('no description');
@@ -389,7 +389,7 @@ $(function () {
 							if (response.data[i].application.name == "Photographer"){
 								var imageBase = response.data[i];
 								//picturesArray.push(imageBase["full_picture"]);
-								var post = new Post(imageBase["full_picture"],imageBase.caption, imageBase.description, imageBase.id);
+								var post = new Post(imageBase["full_picture"],imageBase.message, imageBase.description, imageBase.id);
 								picturesArray.push(post);
 							}
 						}else if(typeof response.data[i].application === "undefined"){
@@ -420,7 +420,7 @@ $(function () {
 						caption.className = 'caption';
 						thumbnail.appendChild(caption);
 						var hacche = document.createElement('h3');
-						var textNode = document.createTextNode(item.caption);
+						var textNode = document.createTextNode(item.message);
 						hacche.appendChild(textNode);
 						caption.appendChild(hacche);
 						var pea = document.createElement('p');
