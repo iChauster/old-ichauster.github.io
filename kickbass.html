@@ -386,6 +386,7 @@ $(function () {
 				console.log(response);
 				var base = 0;
 				console.log(response.data);
+				var lastObject = response.data[response.data - 1];
 				var picturesArray = [];
 					for(var i = 0; i < response.data.length; i++){
 						if(response.data[i] && response.data[i].application){
@@ -396,6 +397,11 @@ $(function () {
 							}
 						}else if(typeof response.data[i].application === "undefined"){
 							console.log('whops');
+						}
+
+						if(response.data[i] = lastObject){
+							response.paging.next;
+							console.log(response.paging.next);
 						}
 					
 					}
