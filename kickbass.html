@@ -417,24 +417,24 @@ $(function () {
 						}
 					
 					}
-					function disectResponse(response){
-						var finalObject = response.data[response.data.length - 1];
-						for(var i = 0; i < response.data.length; i++){
-						if(response.data[i] && response.data[i].application){
-							if (response.data[i].application.name == "Photographer"){
-								var imageBase = response.data[i];
+					function disectResponse(res){
+						var finalObject = res.data[res.data.length - 1];
+						for(var i = 0; i < res.data.length; i++){
+						if(res.data[i] && res.data[i].application){
+							if (res.data[i].application.name == "Photographer"){
+								var imageBase = res.data[i];
 								var post = new Post(imageBase["full_picture"],imageBase.message, imageBase.description, imageBase.id, imageBase["with_tags"].data, imageBase.from.name);
 								picturesArray.push(post);
 							}
-						}else if(typeof response.data[i].application === "undefined"){
+						}else if(typeof res.data[i].application === "undefined"){
 							console.log('whops');
 						}
 
-						if(response.data[i] == finalObject){
+						if(res.data[i] == finalObject){
 							
 							var xmlhttp = new XMLHttpRequest();
-							var url = response.paging.next;
-							console.log(response.paging.next);
+							var url = res.paging.next;
+							console.log(res.paging.next);
 							xmlhttp.onreadystatechange = function() {
     							if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         							var myArr = JSON.parse(xmlhttp.responseText);
