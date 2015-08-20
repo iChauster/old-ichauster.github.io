@@ -464,9 +464,15 @@ $(function () {
 						caption.appendChild(buttonrow);
 						var from = item.from;
 						var string = "Posted by : " + from + ", with ";
+						var lastTag = item.withTags[item.withTags.length - 1].name;
 						for (i = 0; i < item.withTags.length; i ++){
-							var tags = item.withTags[i].name + ", "
-							string += tags;
+							if(item.withTags[i].name == lastTag){
+								var last = "and " + item.withTags[i].name + ".";
+								string += last;
+							}else{
+								var tags = item.withTags[i].name + ", ";
+								string += tags;
+							}
 						}
 						var tagRow = document.createElement('p');
 						var text = document.createTextNode(string);
