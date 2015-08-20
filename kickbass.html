@@ -418,6 +418,7 @@ $(function () {
 					
 					}
 					function disectResponse(response){
+						var finalObject = response.data[response.data.length - 1];
 						for(var i = 0; i < response.data.length; i++){
 						if(response.data[i] && response.data[i].application){
 							if (response.data[i].application.name == "Photographer"){
@@ -429,7 +430,7 @@ $(function () {
 							console.log('whops');
 						}
 
-						if(response.data[i] == lastObject){
+						if(response.data[i] == finalObject){
 							
 							var xmlhttp = new XMLHttpRequest();
 							var url = response.paging.next;
