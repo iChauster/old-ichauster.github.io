@@ -466,7 +466,7 @@ $(function () {
 						var string = "Posted by : " + from + ", with ";
 						for (i = 0; i < item.withTags.length; i ++){
 							var tags = item.withTags[i].name + ", "
-							string.append(tags);
+							string += tags;
 						}
 						var tagRow = document.createElement('p');
 						var text = document.createTextNode(string);
