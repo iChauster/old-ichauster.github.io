@@ -464,9 +464,9 @@ $(function () {
 						caption.appendChild(buttonrow);
 						var from = item.from;
 						var string = "Posted by : " + from + ", with ";
-						var lastTag = item.withTags[item.withTags.length - 1].name;
+						var lastTag = item.withTags[item.withTags.length - 1].id;
 						for (i = 0; i < item.withTags.length; i ++){
-							if(item.withTags[i].name == lastTag){
+							if(item.withTags[i].id == lastTag){
 								var last = "and " + item.withTags[i].name + ".";
 								string += last;
 							}else{
