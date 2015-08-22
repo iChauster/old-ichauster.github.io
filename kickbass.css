@@ -52,7 +52,7 @@ body{
 	border-color:#53748C;
 
 }
-#shareButton :hover {
+#shareButton:hover {
 	background-color: #586A75;
 	border-color : #586A75;
 }
