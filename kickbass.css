@@ -49,10 +49,18 @@ body{
 }
 #shareButton{
 	background-color: #53748C;
+	border-color:#53748C;
+
+}
+#shareButton :hover {
+	background-color: #586A75;
+	border-color : #586A75;
 }
 #twitter{
-	background-color: #00aced ;
+	background-color: #00aced;
+	border-color: #00aced;
 }
+
 @font-face{
 	font-family:'Klavika Bold Opentype';
 	font-weight:bold;
