@@ -401,7 +401,7 @@ $(function () {
 						var myArr;
 						if(response.data[i] == lastObject){
 							
-							var xmlhttp = new XMLHttpRequest();
+							/*var xmlhttp = new XMLHttpRequest();
 							var url = response.paging.next;
 
 							xmlhttp.onreadystatechange = function() {
@@ -414,15 +414,18 @@ $(function () {
 							
 							xmlhttp.open("GET", url, true);
 							xmlhttp.send();
+              */
+              var dataURL = response.paging.next.replace('https://graph.facebook.com/v2.2/','');
+              swith(dataURL);
 						}
-
+          
 					
 					}
 				console.log(picturesArray);
 
 				function swith(dat){
 
-					console.log('loading pictures...');
+					/*console.log('loading pictures...');
 					console.log(dat);
 					var base = 0;
 					console.log(dat.data);
@@ -457,8 +460,56 @@ $(function () {
 						}
 
 					
-					}
+					} */
+          FB.api(dat,
+            function (response){
+        var Post = function(photo, message, description, postid, withTags, from){
+        this.photo = photo;
+        if(typeof message === "undefined"){
+          console.log('no caption');
+          this.message = "";
+        }else{
+          this.message = message;
+        }
+        if(typeof description === "undefined"){
+          console.log('no description');
+          this.description = "";
+        }else{
+          this.description = description;
+        }
+        this.postid = postid;
+        this.withTags = withTags;
+        this.from = from;
+      }
+        
+          if (response && !response.error) {
+        console.log('loading pictures...');
+        console.log(response);
+        var base = 0;
+        console.log(response.data);
+        var lastObject = response.data[response.data.length - 1];
+        var picturesArray = [];
+          for(var i = 0; i < response.data.length; i++){
+            if(response.data[i] && response.data[i].application){
+              if (response.data[i].application.name == "Photographer"){
+                var imageBase = response.data[i];
+                var post = new Post(imageBase["full_picture"],imageBase.message, imageBase.description, imageBase.id, imageBase["with_tags"].data, imageBase.from.name);
+                picturesArray.push(post);
+              }
+            }else if(typeof response.data[i].application === "undefined"){
+              console.log('whops');
+            }
+            var myArr;
+            if(response.data[i] == lastObject){
+              
+    
+              var dataURL = response.paging.next.replace('https://graph.facebook.com/v2.2/','');
+              swith(dataURL);
+            }
+          );
+
 				}
+        console.log(picturesArray);
 
 				function uploadPictures(){
 					console.log('uploading Pics');
