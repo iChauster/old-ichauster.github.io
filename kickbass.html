@@ -50,7 +50,10 @@
      				 <div class="caption">
        					 <h3>Caption</h3>
        					 <p>Description</p>
-      				  <p><a href="#" class="btn btn-primary" role="button">Upvote</a> <a href="#" class="btn btn-default" role="button">Share</a></p>
+      				  <p>
+                <a href="#" class="btn btn-primary" role="button">Upvote</a> 
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="shareModal">Share</button>
+                </p>
       				  <p>USERS</p>
     			  </div>
    				 </div>
@@ -88,7 +91,28 @@
             </div>
         </div>
     </footer>
-
+ 
+ <div class="modal fade" id="shareModal" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                Twitter
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
 <script>
@@ -138,64 +162,7 @@
  });
  }())
 </script>
-<!--
-<script>
-$(function () {
-    var header = $('header');
-    var backgrounds = [
-      'url(https://s3.amazonaws.com/vice_asset_uploader/files/1411511060LH_SH01.png) no-repeat center center scroll', 
-      'url(https://s3.amazonaws.com/vice_asset_uploader/files/1411511064FF_SH01.png) no-repeat center center scroll',
-      'url(http://invisiblelightnetwork.com/wp-content/uploads/2014/10/LH_SH02.jpg) no-repeat center center scroll',
-      'url(http://i.imgur.com/K578SYG.png) no-repeat center center scroll',
-      'url(http://www.awn.com/sites/default/files/styles/original/public/image/featured/1020858-iln-creates-visuals-porter-robinsons-worlds-tour.jpg?itok=pZY37viT) no-repeat center center scroll'
-      ];
-    var current = 0;
 
-    function nextBackground() {
-        header.css(
-            'background',
-        backgrounds[current = ++current % backgrounds.length]);
-        header.css(
-        	'display', 'table');
-        header.css(
-        	'position', 'relative');
-        header.css(
-        	'width', '100%');
-        header.css(
-        	'height', '100%');
-        header.css(
-        	'-webkit-background-size', 'cover');
-        header.css(
-        	'-moz-background-size', 'cover');
-        header.css(
-        	'background-size', 'cover');
-        header.css(
-        	'-o-background-size', 'cover');
-
-        setTimeout(nextBackground, 2720);
-    }
-    setTimeout(nextBackground, 2720);
-    header.css('background', backgrounds[0]);
-    header.css(
-        	'display', 'table');
-    header.css(
-        	'position', 'relative');
-    header.css(
-        	'width', '100%');
-    header.css(
-        	'height', '100%');
-    header.css(
-        	'-webkit-background-size', 'cover');
-    header.css(
-        	'-moz-background-size', 'cover');
-    header.css(
-        	'background-size', 'cover');
-    header.css(
-        	'-o-background-size', 'cover');
-
-});
-</script>
--->
 <script>
 // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -401,21 +368,6 @@ $(function () {
 						}
 						var myArr;
 						if(response.data[i] == lastObject){
-							
-							/*var xmlhttp = new XMLHttpRequest();
-							var url = response.paging.next;
-
-							xmlhttp.onreadystatechange = function() {
-    							if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        							myArr = JSON.parse(xmlhttp.responseText);
-        							console.log(myArr);
-        							swith(myArr);
-    							}
-							}
-							
-							xmlhttp.open("GET", url, true);
-							xmlhttp.send();
-              */
               var dataURL = response.paging.next.replace('https://graph.facebook.com/v2.2/','');
 						}
           
