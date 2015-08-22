@@ -47,6 +47,12 @@ body{
 	font-weight: 300;
 	padding:10px;
 }
+#shareButton{
+	background-color: #53748C;
+}
+#twitter{
+	background-color: #00aced ;
+}
 @font-face{
 	font-family:'Klavika Bold Opentype';
 	font-weight:bold;
