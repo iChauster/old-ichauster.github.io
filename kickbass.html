@@ -175,6 +175,7 @@ require('crypto').randomBytes(48, function(ex, buf) {
 function randomString(length, chars) {
     var result = '';
     for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
+      result = encodeURIComponent(result);
     return result;
 }
 var nonc1 = randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
