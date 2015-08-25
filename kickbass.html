@@ -184,14 +184,14 @@ console.log(nonce);
 function httpGetAsync(theUrl, callback)
 {
     var Auth = function(consumerKey, nonce, token){
-        this.consumerKey = encodeURIComponent('oauth_consumer_key=') + encodeURIComponent(consumerKey);
-        this.nonce = encodeURIComponent('oauth_nonce=') + encodeURIComponent(nonce);
-        this.sigMethod = encodeURIComponent('oauth_signature_method=') + encodeURIComponent('HMAC-SHA1');
+        this.consumerKey = 'oauth_consumer_key=' + encodeURIComponent(consumerKey);
+        this.nonce = 'oauth_nonce=' + encodeURIComponent(nonce);
+        this.sigMethod = 'oauth_signature_method=' + encodeURIComponent('HMAC-SHA1');
         var seconds = new Date() / 1000;
         this.uncodedseconds = encodeURIComponent(seconds);
-        this.timeStamp = encodeURIComponent('oauth_timestamp=') + encodeURIComponent(seconds);
-        this.token = encodeURIComponent('oauth_token=') + encodeURIComponent(token);
-        this.vers = encodeURIComponent('oauth_version=') + encodeURIComponent('1.0');
+        this.timeStamp = 'oauth_timestamp=' + encodeURIComponent(seconds);
+        this.token = 'oauth_token=' + encodeURIComponent(token);
+        this.vers = 'oauth_version=' + encodeURIComponent('1.0');
         this.strung = this.consumerKey + '&' + this.nonce + '&' +this.sigMethod + '&' +this.timeStamp + '&' + this.token + '&' + this.vers;
 
         //include_entities=true&oauth_consumer_key=xvz1evFS4wEEPTGEFPHBog&oauth_nonce=kYjzVBB8Y0ZFabxSWbWovY3uYSQ2pTgmZeNu2VS4cg&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1318622958&oauth_token=370773112-GmHxMAgYyLbNEtIKZeRNFsMKPR9EyMZeS9weJAEb&oauth_version=1.0&status=Hello%20Ladies%20%2B%20Gentlemen%2C%20a%20signed%20OAuth%20request%21
@@ -242,6 +242,18 @@ function httpGetAsync(theUrl, callback)
     //add the freaking request header.
     xmlHttp.setRequestHeader("Authorization", oaut);
     xmlHttp.send();
+
+    /*Request URL:
+  POST https://api.twitter.com/oauth/request_token
+
+  Request POST Body:
+  N/A
+
+  Authorization Header:
+  OAuth oauth_nonce="K7ny27JTpKVsTgdyLdDfmQQWVLERj2zAK5BslRsqyw", oauth_callback="http%3A%2F%2Fmyapp.com%3A3005%2Ftwitter%2Fprocess_callback", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1300228849", oauth_consumer_key="OqEqJeafRSF11jBMStrZz", oauth_signature="Pc%2BMLdv028fxCErFyi8KXFM%2BddU%3D", oauth_version="1.0"
+
+  Response:
+  oauth_token=Z6eEdO8MOmk394WozF5oKyuAv855l4Mlqo7hhlSLik&oauth_token_secret=Kd75W4OQfb2oJTV0vzGzeXftVAwgMnEK9MumzYcM&oauth_callback_confirmed=true */
 
 }
 
