@@ -233,7 +233,7 @@ function httpGetAsync(theUrl, callback)
 
     I can then set this as the Authorization request header for the token request.
     */
-    var oaut = "OAuth oauth_consumer_key=" + '"' + encodeURIComponent(kill) + '", ' + "oauth_nonce=" + '"' + encodeURIComponent(nonce) + '", ' + "oauth_signature=" + '"' + encodeURIComponent(encodstring) + '", ' + "oauth_signature_method=" + '"HMAC-SHA1", ' + "oauth_timestamp" + '"' + encodeURIComponent(auth.uncodedseconds) + '", ' + "oauth_token=" + '"' + encodeURIComponent(right) + '", ' + "oauth_version=" + '"' + "1.0" + '"';
+    var oaut = "OAuth oauth_consumer_key=" + '"' + encodeURIComponent(kill) + '", ' + 'oauth_callback=' + encodeURIComponent('http://ichauster.github.io/kickbass') + '", ' + "oauth_nonce=" + '"' + encodeURIComponent(nonce) + '", ' + "oauth_signature=" + '"' + encodeURIComponent(encodstring) + '", ' + "oauth_signature_method=" + '"HMAC-SHA1", ' + "oauth_timestamp" + '"' + encodeURIComponent(auth.uncodedseconds) + '", ' + "oauth_token=" + '"' + encodeURIComponent(right) + '", ' + "oauth_version=" + '"' + "1.0" + '"';
 
     console.log(oaut);
 
