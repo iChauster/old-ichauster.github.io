@@ -187,7 +187,7 @@ function httpGetAsync(theUrl, callback)
         this.nonce = encodeURIComponent('oauth_nonce=') + encodeURIComponent(nonce);
         this.sigMethod = encodeURIComponent('oauth_signature_method=') + encodeURIComponent('HMAC-SHA1');
         var seconds = new Date() / 1000;
-        this.uncodedseconds = encodeURICompnonent(seconds);
+        this.uncodedseconds = encodeURIComponent(seconds);
         this.timeStamp = encodeURICompnonent('oauth_timestamp=') + encodeURIComponent(seconds);
         this.token = encodeURIComponent('oauth_token=') + encodeURIComponent(token);
         this.vers = encodeURIComponent('oauth_version=') + encodeURIComponent('1.0');
