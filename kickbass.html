@@ -166,11 +166,20 @@
 <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha1.js"></script>
 <script src="node_modules/crypto-js/crypto-js.js"></script>
 <script>
-var nonce;
+/*var nonce;
+var a = require('crypto')
 require('crypto').randomBytes(48, function(ex, buf) {
   nonce = buf.toString('hex');
   console.log(nonce);
-});
+}); */
+function randomString(length, chars) {
+    var result = '';
+    for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
+    return result;
+}
+var nonc1 = randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+var nonce = btoa(nonc1);
+console.log(nonce);
 function httpGetAsync(theUrl, callback)
 {
     var Auth = function(consumerKey, nonce, token){
