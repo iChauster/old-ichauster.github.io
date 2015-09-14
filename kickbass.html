@@ -75,8 +75,7 @@
                         <p>New York, New York </p>
                     </div>
                     <div class="footer-col col-md-4">
-                       <fb:login-button scope="public_profile,email,user_photos,user_posts,publish_actions" onlogin="checkLoginState();" data-auto-logout-link="true">
-						</fb:login-button>
+                       
 						<div id="status">
 						</div>
                     </div>
@@ -380,6 +379,7 @@ httpGetAsync('https://api.twitter.com/oauth/request_token',
   }
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
+  regularScreenSwitch();
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
