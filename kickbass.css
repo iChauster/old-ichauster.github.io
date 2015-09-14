@@ -90,10 +90,16 @@ body{
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    padding:10px;
 }
 h1{
 	font-weight:300;
 	font-family:'Raleway';
+	font-size:5em;
+}
+#elsewhere a {
+	font-weight:100;
+	
 }
 p{
 	font-family:'Nexa Bold';
