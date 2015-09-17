@@ -6,7 +6,7 @@
 
 }
 #Ebene_1{
-  width: 530px;
+  width: 600px;
   height: 120px;
   display: block;
   position: relative;
@@ -16,7 +16,7 @@
 }
 @media(max-width: 768px){
   #Ebene_1{
-    width: 400px;
+    width: 300px;
      height: 120px;
     display: block;
    position: relative;
