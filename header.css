@@ -5,7 +5,15 @@
     padding-top: 100px;
 
 }
-
+#Ebene_1{
+  width: 600px;
+  height: 120px;
+  display: block;
+  position: relative;
+  overflow: hidden; 
+  margin: 0 auto;
+  text-align: center;
+}
 .header {
     height: 100px;
     width: 400px; /** Use 100% to fill the width of the page **/
