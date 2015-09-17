@@ -231,7 +231,10 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
-  #dope{
+
+}
+@media (max-width: 768px){
+    #dope{
        filter: url(#filter);
       text-align: center;
       fill: white;
