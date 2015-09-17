@@ -9,7 +9,14 @@ body{
 
 }
 
-
+svg{
+  width: 600px;
+  height: 120px;
+  display: block;
+  position: relative;
+  overflow: hidden; 
+  margin: 0 auto;
+}
 .header {
     display: table;
     position: relative;
