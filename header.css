@@ -14,6 +14,15 @@
   margin: 0 auto;
   text-align: center;
 }
+#dope{
+    filter: url(#filter);
+    text-align: center;
+    fill: white;
+      font-family: 'Roboto';
+      font-size: 7em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .header {
     height: 100px;
     width: 400px; /** Use 100% to fill the width of the page **/
@@ -201,7 +210,6 @@ body {
 /*
  * Affix and center
  */
-
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
@@ -222,6 +230,15 @@ body {
   .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+  #dope{
+       filter: url(#filter);
+      text-align: center;
+      fill: white;
+       font-family: 'Roboto';
+       font-size: 3em;
+       -webkit-font-smoothing: antialiased;
+       -moz-osx-font-smoothing: grayscale;
   }
 }
 
