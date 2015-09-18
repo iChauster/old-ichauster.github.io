@@ -6,9 +6,13 @@
   alert("YOU'RE SCREEN ISN'T BIG ENOUGH");
   var intro = document.getElementById('intro');
   var a = document.createElement('h1');
+  a.className = 'name';
   var text = document.createTextNode('IVAN CHAU');
   a.appendChild(text);
-  intro.appendChild(a);
+  var outro = document.getElementById('levelUp');
+  intro.insertBefore(a,outro);
+  //intro.appendChild(a);
+
  }else{
  // parameters
     var a = 40,
