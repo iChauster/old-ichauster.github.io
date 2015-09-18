@@ -1,7 +1,4 @@
-if (!SVG.supported) {
-    alert('SVG not supported !');
-}
-else {
+
     // parameters
     var a = 40,
         speed = 50,
