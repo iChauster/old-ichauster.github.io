@@ -2,7 +2,7 @@
  console.log(width);
  if(!SVG.supported){
   alert('SVG NOT SUPPORTED');
-}else if(width !> 860){
+}else if(!(width > 860)){
   alert("YOU'RE SCREEN ISN'T BIG ENOUGH");
   var intro = document.getElementById('intro');
   var a = document.createElement('h1');
