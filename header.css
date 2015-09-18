@@ -215,13 +215,6 @@ body {
   }
 }
 
-.glitch {
-  color: white;
-  font-size: 100px;
-  position: relative;
-  width: 400px;
-  margin: 0 auto;
-}
 
 @keyframes noise-anim {
   0% {
@@ -295,7 +288,6 @@ body {
   text-shadow: -1px 0 red;
   top: 0;
   color: white;
-  background: black;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim 2s infinite linear alternate-reverse;
@@ -373,7 +365,6 @@ body {
   text-shadow: 1px 0 blue;
   top: 0;
   color: white;
-  background: black;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
