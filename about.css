@@ -492,3 +492,30 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
+#levelUp {
+  margin:0 auto;
+}
+#levelUp svg {
+  -webkit-animation: noise 2s linear infinite;
+  animation: noise 2s linear infinite;
+}
+
+@-webkit-keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% { -webkit-transform: scaleY(1); }  
+  4.3% { -webkit-transform: scaleY(1.7); }
+  43% { -webkit-transform: scaleX(1.5); }
+}
+
+@keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% { transform: scaleY(1); }  
+  4.3% { transform: scaleY(1.7); }
+  43% { transform: scaleX(1.5); }
+}
+
+p {
+  text-align:center;
+}
+p.small {
+  font-size:0.8em;
+  opacity:0.5;
+}
