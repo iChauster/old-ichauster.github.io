@@ -177,4 +177,3 @@
             counter = 0;
         }
     }, speed);
-}
