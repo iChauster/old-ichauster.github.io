@@ -1,3 +1,15 @@
+ var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+ console.log(width);
+ if(!SVG.supported){
+  alert('SVG NOT SUPPORTED');
+else if(width !> 860){
+  alert("YOU'RE SCREEN ISN'T BIG ENOUGH");
+  var intro = document.getElementById('intro');
+  var a = document.createElement('h1');
+  var text = document.createTextNode('IVAN CHAU');
+  a.appendChild(text);
+  intro.appendChild(a);
+ }else{
  // parameters
     var a = 40,
         speed = 50,
@@ -176,3 +188,4 @@
             counter = 0;
         }
     }, speed);
+  }
