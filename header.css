@@ -215,7 +215,6 @@ body {
   }
 }
 
-
 @keyframes noise-anim {
   0% {
     clip: rect(32px, 9999px, 54px, 0);
@@ -369,6 +368,7 @@ body {
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
+
 /*
  * Affix and center
  */
