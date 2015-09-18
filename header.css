@@ -366,15 +366,15 @@ body {
 @media (max-width: 768px){
   .glitch{
     color:white;
-    font-size:3em;
+    font-size:4em;
     position:relative;
-    width:400px;
+    width:300px;
     margin:0 auto;
   }
   .glitch:before {
   content: attr(data-text);
   position: absolute;
-  left: -2px;
+  left: 87px;
   text-shadow: 1px 0 blue;
   top: 0;
   color: white;
@@ -386,7 +386,7 @@ body {
 .glitch:after {
   content: attr(data-text);
   position: absolute;
-  left: 2px;
+  left: 89px;
   text-shadow: -1px 0 red;
   top: 0;
   color: white;
