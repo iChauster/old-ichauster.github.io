@@ -206,15 +206,7 @@ body {
   margin:0 auto;
   background: black;
 }
-@media (max-width: 768px){
-  .glitch{
-    color:white;
-    font-size:3em;
-    position:relative;
-    width:400px;
-    margin:0 auto;
-  }
-}
+
 
 @keyframes noise-anim {
   0% {
@@ -371,7 +363,39 @@ body {
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
-
+@media (max-width: 768px){
+  .glitch{
+    color:white;
+    font-size:3em;
+    position:relative;
+    width:400px;
+    margin:0 auto;
+  }
+  .glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+}
 /*
  * Affix and center
  */
