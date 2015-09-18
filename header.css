@@ -287,6 +287,7 @@ body {
   text-shadow: -1px 0 red;
   top: 0;
   color: white;
+  background: black;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim 2s infinite linear alternate-reverse;
@@ -364,6 +365,7 @@ body {
   text-shadow: 1px 0 blue;
   top: 0;
   color: white;
+  background: black;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
