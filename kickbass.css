@@ -105,6 +105,11 @@ h1{
 	font-weight:100;
 
 }
+#wage{
+  display:table-cell;
+  vertical-align: middle;
+  height: 400px;
+}
 p{
 	font-family:'Nexa Bold';
 }
@@ -134,8 +139,9 @@ footer a:hover{
 footer .footer-above {
     padding-top: 40px;
     background-color: #fff;
-}
+   background : url('http://i.ytimg.com/vi/t86Po6EQWD0/hqdefault.jpg');
 
+}
 footer .footer-col {
     margin-bottom: 50px;
 }
