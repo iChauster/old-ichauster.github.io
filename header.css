@@ -207,6 +207,15 @@ body {
   background: black;
 }
 
+.footer-above{
+  background : url('http://i.ytimg.com/vi/t86Po6EQWD0/hqdefault.jpg');
+}
+#wage{
+  display:table-cell;
+  vertical-align: middle;
+  height: 400px;
+}
+
 
 @keyframes noise-anim {
   0% {
