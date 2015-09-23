@@ -166,6 +166,8 @@ header .intro-text .skills {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    background-color: #000;
+    color:#ffffff;
 }
 
 .navbar a:focus {
@@ -224,16 +226,6 @@ section.cool{
     -o-background-size: cover;
     background-size: cover;
     display: table-cell;
-}
-@font-face {
-    font-family:"Dense";
-    src : url('Dense-Regular.otf') format('opentype');   
-}
-#conta h1 {
-    vertical-align: middle;
-    text-align: center;
-    font-family:'Dense';
-    font-size: 2em;
 }
 }
 
