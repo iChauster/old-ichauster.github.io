@@ -216,7 +216,26 @@ section.cool{
     height: 500px;
     width: 100%;
 }
-
+#conta{
+    height:100%;
+    width:100%;
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: table-cell;
+}
+@font-face {
+    font-family:"Dense";
+    src = url('Dense-Regular.otf') format('opentype');   
+}
+#conta h1 {
+    vertical-align: middle;
+    text-align: center;
+    font-family:'Dense';
+    font-size: 2em;
+}
+}
 
 section.success a,
 section.success a:hover,
