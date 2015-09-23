@@ -171,9 +171,8 @@ header .intro-text .skills {
     background-color: #000;
     color:#ffffff;
 }
-.navbar a{
+.navbar-brand{
     color:#fff;
-
 }
 
 .navbar a:focus {
