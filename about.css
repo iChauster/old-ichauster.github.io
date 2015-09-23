@@ -169,6 +169,10 @@ header .intro-text .skills {
     background-color: #000;
     color:#ffffff;
 }
+.navbar a{
+    color:#fff;
+    
+}
 
 .navbar a:focus {
     outline: 0;
