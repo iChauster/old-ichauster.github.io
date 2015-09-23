@@ -227,7 +227,7 @@ section.cool{
 }
 @font-face {
     font-family:"Dense";
-    src = url('Dense-Regular.otf') format('opentype');   
+    src : url('Dense-Regular.otf') format('opentype');   
 }
 #conta h1 {
     vertical-align: middle;
