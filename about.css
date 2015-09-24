@@ -499,6 +499,15 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
+#kck{
+    background: url('img/dojo.png');
+}
+#doro{
+    background-color:#000;
+}
+#white{
+    color: #fff;
+}
 #levelUp {
   margin:0 auto;
 }
