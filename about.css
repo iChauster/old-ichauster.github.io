@@ -508,6 +508,9 @@ footer .footer-below {
 #white{
     color: #fff;
 }
+#blackstar:after{
+    background-color: #000;
+}
 #levelUp {
   margin:0 auto;
 }
