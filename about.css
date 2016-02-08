@@ -234,6 +234,15 @@ section.success a.active {
     color: #fff;
 
 }
+#plug{
+    text-align: center;
+}
+#ghub{
+    padding:20px;
+}
+#ghub:hover{
+    background: black;
+}
 
 @media(max-width:767px) {
     section {
