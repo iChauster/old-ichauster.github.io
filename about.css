@@ -236,6 +236,7 @@ section.success a.active {
 }
 #plug{
     text-align: center;
+    width:100%;
 }
 #ghub{
     padding:20px;
