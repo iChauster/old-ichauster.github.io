@@ -249,6 +249,12 @@ section.success a.active {
 	#plug h1{
 		font-size : 25px;
 	}
+    #plug{
+        margin:0;
+    }
+    #ddr{
+        margin:0;
+    }
     section {
         padding: 75px 0;
     }
