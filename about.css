@@ -245,6 +245,9 @@ section.success a.active {
 }
 
 @media(max-width:767px) {
+	#plug h1{
+		font-size : 25px;
+	}
     section {
         padding: 75px 0;
     }
